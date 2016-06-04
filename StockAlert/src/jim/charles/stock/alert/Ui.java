@@ -31,6 +31,7 @@ public class Ui
 	private JTextField lastName;
 	private JTextField firstName;
 	private Boolean isValid = false;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -135,7 +136,7 @@ public class Ui
 				
 			}
 		});
-		btnSubmit.setBounds(168, 245, 117, 29);
+		btnSubmit.setBounds(165, 267, 117, 29);
 		panel.add(btnSubmit);
 
 		priceInput = new JTextField();
@@ -202,6 +203,16 @@ public class Ui
 		txtrInstruction.setText("Instruction:\nPlease fill in all the information.\nPlease hit \"find\" button before you submit the form.\nThank you again for using StockAlert!");
 		txtrInstruction.setBounds(51, 306, 383, 121);
 		panel.add(txtrInstruction);
+		
+		JLabel lblTxtMessage = new JLabel("TXT Message:");
+		lblTxtMessage.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblTxtMessage.setBounds(51, 221, 100, 21);
+		panel.add(lblTxtMessage);
+		
+		textField = new JTextField();
+		textField.setColumns(10);
+		textField.setBounds(155, 219, 130, 26);
+		panel.add(textField);
 	}
 
 	private String welcomeMessage()
