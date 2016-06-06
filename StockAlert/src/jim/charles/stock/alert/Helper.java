@@ -5,6 +5,14 @@ import java.util.TimerTask;
 
 public class Helper 
 {
+	
+	/**
+	 * Refresh every ten minutes 
+	 * to check if current stock price 
+	 * meets target stock price
+	 * if stock current stock price hits target price,
+	 * an alert will be sent to user
+	 */
 	public Helper()
 	{
 		while (helpHelper())
@@ -13,6 +21,14 @@ public class Helper
 		}
 	}
 
+	
+	
+	/**
+	 * 
+	 * @return false if stock current price meets target price
+	 * and send an alert to the user
+	 * return true if stock current price does not meet target price
+	 */
 	private boolean helpHelper()
 	{
 //		System.out.println("user price -> " + GetInfo.getUserPrice());
@@ -26,6 +42,13 @@ public class Helper
 		else return true;
 	}
 
+	
+	/**
+	 * Will run helpHelper to check 
+	 * current price in MINUTES minutes
+	 * this case MINUTES is 10
+	 * can be changed based on requirement
+	 */
 	private void tenMinTimer()
 	{
 		int MINUTES = 10; // The delay in minutes
@@ -42,6 +65,12 @@ public class Helper
 		// 1000 milliseconds in a second * 60 per minute * the MINUTES variable. 
 	}
 
+	
+	/**
+	 * 
+	 * @return alert message with stock symbol and stock price as a string
+	 * will be sent when stock current price hits target price 
+	 */
 	private String alertMessage()
 	{
 		return "Hello, Stock Alert here,\n We are informing you that "
